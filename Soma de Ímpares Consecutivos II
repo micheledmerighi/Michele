@@ -1,0 +1,79 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package impar2;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Michele
+ */
+public class Impar2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+
+        // LER N INTEIRO DA QTDE DE TESTE
+        // TESTES SÃO DOIS NUMEROS INTERISO M e N 
+        // SOMA DOS IMPARES ENTRE X e Y 
+        Scanner e = new Scanner(System.in);
+
+        //leia 2 valores inteiros
+        int X;
+        int Y;
+        int N;
+        int soma = 0;
+
+        //Ler B que é a quantidade de casos teste
+        System.out.println("Digite a quantidade de casos a serem testados: ");
+        N = e.nextInt();
+
+        //executar 'N' vezes o caso teste
+        for (int i = 0; i < N; i++) {
+
+            //receber X e Y
+            System.out.println("Insira um valor:");
+            X = e.nextInt();
+
+            System.out.println("Insira outro valor:");
+            Y = e.nextInt();
+
+            //logica
+            //primeiro ver qual é o maior X ou Y
+            // se x for maior que y
+            if (X > Y) {
+                //for(//onde comeca; //condição de parada; // o quanto incrementa)
+
+                for (int j = Y + 1; j < X; j++) {
+
+                    //verificar se é impar
+                    if (j % 2 == 1 || j % 2 == -1) {
+
+                        soma += j;
+                    }
+
+                }
+
+            } else if (Y > X){
+                
+                for(int k = X+1; k < Y; k++){
+                    
+                    if (k % 2 == 1 || k % 2 == -1) {
+
+                        soma += k;
+                    }
+                    
+                }
+                
+          }
+            
+            System.out.println(soma);
+            soma=0;
+        }
+    }
+}
