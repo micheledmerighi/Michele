@@ -1,0 +1,61 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package triangulo;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Michele
+ */
+public class Triangulo {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+         Scanner e = new Scanner(System.in);
+        
+        double ladoA;
+        double ladoB;
+        double ladoC;
+        double perimetro;
+        double area;
+
+        System.out.println("Digite o Lado A: ");
+        ladoA = e.nextDouble();
+        
+        System.out.println("Digite o Lado B: ");
+        ladoB = e.nextDouble();
+        
+        System.out.println("Digite o Lado C: ");
+        ladoC = e.nextDouble();
+        
+       
+        if(
+
+        (Math.abs((ladoB - ladoC)) < ladoA) && Math.abs((ladoB - ladoC)) < (ladoB + ladoC) &&
+        (Math.abs((ladoA - ladoC)) < ladoB) && Math.abs((ladoA - ladoC)) < (ladoA + ladoC) &&
+        (Math.abs((ladoA - ladoB)) < ladoC) && Math.abs((ladoA - ladoB)) < (ladoA + ladoB))
+        {
+    
+    
+        perimetro = ladoA + ladoB + ladoC;
+    
+        System.out.println("Perimetro é: " + perimetro); 
+    
+        } else {
+
+        area = ((ladoA + ladoB)*ladoC)/2;
+        
+        System.out.println("Area é: " + area);
+
+ 
+    
+      }
+        }
+          }
