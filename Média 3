@@ -1,0 +1,70 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package média;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Michele
+ */
+public class Média {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        Scanner e = new Scanner(System.in);
+        
+        float N1;
+        float N2;
+        float N3;
+        float N4;
+        float media;
+        float rec = 0;
+        double media2;
+        
+        System.out.println("Insira N1: ");
+        N1 = e.nextFloat();
+        
+        System.out.println("Insira N2: ");
+        N2 = e.nextFloat();
+        
+        System.out.println("Insira N3");
+        N3 = e.nextFloat();
+        
+        System.out.println("Insira N4:");
+        N4 = e.nextFloat();
+        
+        
+        media = (N1*2 + N2*3 + N3*4 + N4*1)/10;
+        
+        if (media >= 7) {
+            System.out.println("Aluno Aprovado!");
+        }
+        if (media < 5) {
+            System.out.println("Aluno Reprovado!");
+        }
+        else { 
+             System.out.println("Aluno em Exame!");
+             rec = e.nextFloat();  
+        }
+        
+             System.out.println("Nota do Exame: " + rec);
+             
+             media2 = (rec + media)/2;
+             
+             if(media2 >= 5) {
+                 System.out.println("Aluno Aprovado!" + media2);
+             } else {
+                 System.out.println("Aluno Reprovado!" + media2);
+             }
+        
+        
+    }
+    
+}
